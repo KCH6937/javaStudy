@@ -1,0 +1,44 @@
+CHAPTER05 참조 타입 핵심
+
+① 기본 타입 : byte, short, char, int, long, float, double, boolean 타입을 말하며 이들 타입의 변수에는 값 자체(리터럴)가 저장됨
+
+
+② 참조 타입 : 기본 타입을 제외한 배열, 열거, 클래스, 인터페이스 등
+
+참조 타입의 변수에는 객체의 번지가 저장
+
+
+③ 메모리 사용 영역 : JVM은 운영체제에서 할당받은 메모리 영역을 메소드 영역, 힙 영역, 스택 영역으로 구분 및 사용
+
+메소드 영역 : 정적 필드, 상수, 메소드 코드, 생성자 코드 위치
+
+힙 영역 : 객체가 생성
+
+스택 영역 : 변수가 생성
+
+
+④ 번지 비교 : 비교 연산자(==, !=)가 기본 타입에서 사용되면 값을 비교하지만, 참조 타입에서 사용되면 번지를 비교
+
+==이 true → 같은 객체 참조
+
+==이 false → 다른 객체 참조
+
+
+⑤ null : 참조 타입 변수는 null값을 가질 수 있음
+
+null값도 초기값으로 사용할 수 있기 때문에 null로 초기화된 참조 변수는 스택 영역에 생성
+
+ex> String s = null;
+
+
+⑥ NullPointerException : 참조 변수가 null을 가지고 있을 경우에는, 참조 객체가 없으므로 참조 변수를 통해 객체를 사용할 수 없음
+
+만약 null인 참조 변수를 통해 있지도 않은 객체의 필드나 메소드를 사용하면 NullPointerException이 발생
+
+ex> int[] arr = null;
+
+arr[0] = 10;    //  NullPointerException 발생
+
+ex2> String str = null;
+
+System.out.println(str.length());    // NullPointerException 발생
