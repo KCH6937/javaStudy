@@ -8,11 +8,11 @@ public class Car {
     private int price;
     
     public void carInformation() {
-        System.out.println("?????? : " + getName());
-        System.out.println("????????? : " + getBrand());
-        System.out.println("?????? : " + getRank());
-        System.out.println("?????? : " + getColor());
-        System.out.println("?????? : " + getPrice() + "???");
+        System.out.println("이름 : " + getName());
+        System.out.println("브랜드 : " + getBrand());
+        System.out.println("크기 : " + getRank());
+        System.out.println("색 : " + getColor());
+        System.out.println("가격 : " + getPrice() + "원");
     }
     
     public String getName() {
